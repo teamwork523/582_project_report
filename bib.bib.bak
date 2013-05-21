@@ -186,12 +186,12 @@
 	year=2003
 }
 
-@Misc{3gpp.lte,
+@Misc{3gpp.3G,
         title = {{3GPP UMTS (3G)}},
         howpublished ={\url{http://www.3gpp.org/UMTS}}
 }
 
-@Misc{3gpp.3G,
+@Misc{3gpp.lte,
         title = {{3GPP LTE}},
         howpublished ={\url{http://www.3gpp.org/LTE}}
 }

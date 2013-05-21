@@ -3,39 +3,65 @@
 
 %\pagenumbering{arabic}
 
-\usepackage{amsfonts}     % Adds math fonts, commands such as \begin{align}
-\usepackage{array}        % Tables for use in math mode
-\usepackage{booktabs}     % Elegant table-formatting library
-\usepackage{bold-extra}   % Provides bf+sc (only in textbf+textsc env.)
-\usepackage{bytefield}    % Formatting and layout of packets / bytefields
-\usepackage[skip=5pt]{caption}
-\usepackage{color}        % Allow the use and definition of colors
-\usepackage{colortbl}     % Color table cells
-\usepackage{comment}      % Provides \begin,\end{comment} for large blocks
+%\usepackage{amsfonts}     % Adds math fonts, commands such as \begin{align}
+%\usepackage{array}        % Tables for use in math mode
+%\usepackage{booktabs}     % Elegant table-formatting library
+%\usepackage{bold-extra}   % Provides bf+sc (only in textbf+textsc env.)
+%\usepackage{bytefield}    % Formatting and layout of packets / bytefields
+%\usepackage[skip=5pt]{caption}
+%\usepackage{color}        % Allow the use and definition of colors
+%\usepackage{colortbl}     % Color table cells
+%\usepackage{comment}      % Provides \begin,\end{comment} for large blocks
 %\usepackage{cprotect}     % Allows verbatim, other formatting in macro args
-\usepackage{endnotes}     % Footnotes pushed to the end of a document
-\usepackage{gensymb}      % Adds useful symbols w/out math mode, e.g. \degree
-\usepackage{graphicx}     % For importing graphics
-\usepackage{hyperref}     % Creates hyperlinks from ref/cite 
-\hypersetup{pdfstartview=FitH}
-\usepackage{listings}     % in-line source code (poorly, consider minted)
-\usepackage{mathtools}    % amsmath extension, adds more math formatting
-\usepackage{multirow}     % Multiple row spacing in tables
-\usepackage{nth}          % Typeset 33rd correctly as \nth{33}
+%\usepackage{endnotes}     % Footnotes pushed to the end of a document
+%\usepackage{gensymb}      % Adds useful symbols w/out math mode, e.g. \degree
+%\usepackage{graphicx}     % For importing graphics
+%\usepackage{hyperref}     % Creates hyperlinks from ref/cite 
+%\hypersetup{pdfstartview=FitH}
+%\usepackage{listings}     % in-line source code (poorly, consider minted)
+%\usepackage{mathtools}    % amsmath extension, adds more math formatting
+%\usepackage{multirow}     % Multiple row spacing in tables
+%\usepackage{nth}          % Typeset 33rd correctly as \nth{33}
 %\usepackage[section]{placeins} % Don't let figs escape their sections
-\usepackage{rotating}     % Rotates any object, note sideways != sidewaysfigure
+%\usepackage{rotating}     % Rotates any object, note sideways != sidewaysfigure
 %\usepackage[all=normal]{savetrees} % For when space is tight, read manual and
                           % selectively enable things. CAN BREAK CONF STYLES!!
-\usepackage{soul}         % Provides \hl{} for highlighting
+%\usepackage{soul}         % Provides \hl{} for highlighting
 %\usepackage{subfig}
 %\usepackage{subfigure}    % Complicated figure creation
-\usepackage{subcaption}   % Replaces both subfig and subfigure
-\usepackage[nofancy]{svninfo} % svn information in docs (req. svn:keywords)
-\usepackage{tabularx}     % Complicated table creation
-\usepackage{threeparttable} % Add footnotes to a table
-\usepackage{units}        % For nice fractions, \nicefrac{1}{2} --> 1/2
-\usepackage{url}          % Pretty printing of hyperlinks
-\usepackage{xspace}       % Intelligently add spaces after commands
+%\usepackage{subcaption}   % Replaces both subfig and subfigure
+%\usepackage[nofancy]{svninfo} % svn information in docs (req. svn:keywords)
+%\usepackage{tabularx}     % Complicated table creation
+%\usepackage{threeparttable} % Add footnotes to a table
+%\usepackage{units}        % For nice fractions, \nicefrac{1}{2} --> 1/2
+%\usepackage{url}          % Pretty printing of hyperlinks
+%\usepackage{xspace}       % Intelligently add spaces after commands
+
+%%%%%%%%%%%%%%%%%%%
+%%% new package %%%
+%%%%%%%%%%%%%%%%%%%
+\usepackage{epsfig,xspace,multirow,capt-of,comment}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+\usepackage[hyphenbreaks]{breakurl}
+\usepackage{graphicx,amssymb,amsmath,endnotes}
+\usepackage{times}
+\usepackage{subfigure}
+\usepackage{ulem}
+\usepackage{rotating}
+\usepackage{wasysym, pifont}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{placeins}
+\usepackage{balance}
+\usepackage{epstopdf}
+\epstopdfsetup{update}
+%%%%%
+% used in QxDM section
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
 
 %%%%%
 % used in QxDM section
@@ -43,6 +69,10 @@
 \usepackage{algorithm}
 \usepackage{array}
 \usepackage{tabularx}
+%%%%%
+% convert eps to pdf
+\usepackage{epstopdf}
+\epstopdfsetup{update}
 %%%%%
 
 \usepackage{epsfig,xspace,multirow,capt-of}
@@ -53,7 +83,7 @@
 \usepackage{rotating}
 \usepackage{wasysym, pifont}
 
-\DeclareCaptionType{copyrightbox}
+%\DeclareCaptionType{copyrightbox}
 
 \newlength\SUBSIZE
 
@@ -119,7 +149,7 @@
 \newcommand{\ncaption}[1]{
  	\vspace{-1.2em}
 	\caption{#1}
- 	\vspace{-1.5em}
+% 	\vspace{-1.5em}
 }
 %%%%%
 
@@ -154,12 +184,16 @@
 % abstract            %  0.5 pg
 %\vfill\eject
 \input{intro}         % 1.5 pg
-\input{related}       % 2.0 pg
+\input{background}
 %\clearpage
-\input{measure}         % 3.0 pg
-\input{crossAnalysis}
+%\input{measure}         % 3.0 pg
+\input{observation}
+\input{methodology}
+%\input{crossAnalysis}
+\input{rootCauseAnalysis}
 \input{eval}          % 4.0 pg
 \input{disc}          % 0.5 pg
+\input{related}       % 2.0 pg
 \input{conc}          % 0.25 pg
 \input{ack}           % 0.25 pg
 

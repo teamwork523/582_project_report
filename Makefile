@@ -1,11 +1,11 @@
 BIB = bib.bib
 
 all:
-	pdflatex paper
-	pdflatex paper
+	pdflatex -shell-escape paper
 	bibtex paper
-	pdflatex paper
+	pdflatex -shell-escape paper
+	pdflatex -shell-escape paper
 
 clean:
-	/bin/rm -f paper.pdf *.dvi *.aux *.ps *~ *.log *.out *.ent
+	/bin/rm -f paper.pdf *.dvi *.aux *.ps *~ *.log *.out *.ent figs/*-eps-converted-to.pdf
 	/bin/rm -f *.lot *.lof *.toc *.blg *.bbl url.sty

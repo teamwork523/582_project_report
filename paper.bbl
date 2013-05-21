@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{3gpp.3G}
+{3GPP UMTS (3G)}.
+\newblock \url{http://www.3gpp.org/UMTS}.
+
 \bibitem{tcpdump}
 {tcpdump}.
 \newblock \url{http://www.tcpdump.org/}.
@@ -50,11 +54,12 @@
 \newblock In {\em Proc. of the 2012 ACM SIGCOMM workshop on Cellular networks},
   2012.
 
-\bibitem{pkt.train}
-{Hu, Ningning, and Peter Steenkiste}.
-\newblock {Evaluation and Characterization of Available Bandwidth Probing
-  Techniques}.
-\newblock {\em IEEE J. Selected Areas in Communications}, 2003.
+\bibitem{4g_rrc}
+{Junxian Huang, Feng Qian, Alexandre Gerber, Z. Morley Mao, Subhabrata Sen, and
+  Oliver Spatscheck}.
+\newblock {A Close Examination of Perfomance and Power Characteristics of 4G
+  LTE Networks}.
+\newblock In {\em Proc. ACM MobiSys}, 2012.
 
 \bibitem{proteus}
 {Qiang Xu, Sanjeev Mehrotra, Z. Morley Mao, and Jin Li}.
